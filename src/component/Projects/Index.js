@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { BtnSpan, Buttons } from "../ButtonElements";
 import Sliders from "../common/Sliders";
 import {
   Wrapper,
@@ -10,6 +12,7 @@ import {
 } from "./ProjectsElements";
 
 export default function Index() {
+  const Button = Buttons(Link);
   return (
     <BodyScene>
       <SceneBox>
@@ -24,9 +27,19 @@ export default function Index() {
         </ProjectTitle>
         <Sliders />
       </Wrapper>
-
-      <ProjectBtn to="/projects" className="btn btn-warning">
-        ALL PROJECTS
+      <ProjectBtn>
+        <Button
+          to="/projects"
+          primary="true"
+          dark="true"
+          smooth="true"
+          duration={500}
+          spy="true"
+          exact="true"
+          offset={-80}
+        >
+          <BtnSpan>ALL PROJECTS</BtnSpan>
+        </Button>
       </ProjectBtn>
     </BodyScene>
   );

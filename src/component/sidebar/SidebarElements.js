@@ -36,7 +36,6 @@ export const SidebarLink = styled(LinkS)`
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
   list-style: none;
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -94,7 +93,6 @@ export const SidebarRoute = styled(LinkR)`
   outline: none;
   border: none;
   cursor: pointer;
-  text-decoration: none;
   transition: all 0.2s ease-in-out;
 
   &:hover {

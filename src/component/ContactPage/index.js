@@ -61,12 +61,6 @@ const Index = () => {
               <h2>Po.Box.1215-90100</h2>
             </div>
           </div>
-          <a href="youtube.com" className="contact-item">
-            <i className="fa fa-map-marker icon fa-2x aria='true'"></i>
-            <div style={{ zIndex: "10000" }} className="contact-info">
-              <button className="btn btn-success btn-sm">Message Me</button>
-            </div>
-          </a>
         </div>
       </div>
     </section>

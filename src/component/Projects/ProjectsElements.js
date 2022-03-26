@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const BodyScene = styled.div`
   background-color: #000;
@@ -64,33 +63,16 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 
-export const ProjectContainer = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  background-color: #777;
-
-  @media screen and (max-width: 760px) {
-    flex-direction: column;
-  }
-`;
 export const ProjectTitle = styled.div`
   position: absolute;
   top: 3rem;
 `;
 
-export const ProjectBtn = styled(Link)`
+export const ProjectBtn = styled.div`
   position: absolute;
   bottom: 7rem;
   color: #fff;
   cursor: pointer;
-
-  &:hover {
-    background: rgb(20, 220, 20);
-    box-shadow: 10px 4px 20px #fff;
-  }
 
   @media screen and (max-width: 768px) {
     bottom: 5rem;

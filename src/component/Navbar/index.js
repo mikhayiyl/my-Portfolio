@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import { IconContext } from "react-icons/lib";
 import { FaMoon } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll/modules";
-import { BtnSpan, Button } from "../ButtonElements";
+import { BtnSpan, Buttons } from "../ButtonElements";
 import {
   Nav,
   NavLogo,
@@ -15,6 +17,7 @@ import {
   Burger,
 } from "./NavbarElements";
 const Navbar = ({ toggle, isOpen }) => {
+  const Button = Buttons(Link);
   const [scrollNav, setScrollNav] = useState(false);
 
   useEffect(() => {
@@ -49,7 +52,7 @@ const Navbar = ({ toggle, isOpen }) => {
               <NavItem>
                 <NavLinks
                   to="about"
-                  smooth={true}
+                  smooth="true"
                   duration={500}
                   spy={true}
                   exact="true"
@@ -86,7 +89,7 @@ const Navbar = ({ toggle, isOpen }) => {
               <NavItem>
                 <NavLinks
                   to="contact"
-                  smooth={true}
+                  smooth="true"
                   duration={500}
                   spy={true}
                   exact="true"

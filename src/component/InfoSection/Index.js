@@ -1,5 +1,6 @@
 import React from "react";
-import { BtnSpan, Button } from "./../ButtonElements";
+import { Link } from "react-scroll";
+import { BtnSpan, Buttons } from "./../ButtonElements";
 import {
   InfoContainer,
   InfoWrapper,
@@ -31,6 +32,7 @@ const InfoSection = ({
   dark2,
   buttonLabel,
 }) => {
+  const Button = Buttons(Link);
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -44,8 +46,8 @@ const InfoSection = ({
                 <BtnWrap>
                   <Button
                     dark={dark ? 1 : 0}
-                    to="home"
-                    smooth={true}
+                    to="contact"
+                    smooth="true"
                     duration={500}
                     spy={true}
                     exact="true"

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { BtnSpan, Button } from "../ButtonElements";
+import React from "react";
+import { Link } from "react-scroll";
+import { BtnSpan, Buttons } from "../ButtonElements";
 import video from "../../video/space.mp4";
 import {
   HeroContainer,
@@ -10,16 +11,11 @@ import {
   HeroSpan,
   HeroP,
   HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
 } from "./HeroElements";
 import GlowParticle from "../common/GlowParticle";
 const HeroSection = () => {
-  const [hover, setHover] = useState(false);
+  const Button = Buttons(Link);
 
-  const onHover = () => {
-    setHover(!hover);
-  };
   return (
     <HeroContainer id="home">
       <GlowParticle />
@@ -46,20 +42,16 @@ const HeroSection = () => {
         </HeroP>
         <HeroBtnWrapper>
           <Button
-            to="signup"
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
+            to="projects"
             primary="true"
             dark="true"
-            smooth={true}
+            smooth="true"
             duration={500}
             spy={true}
             exact="true"
             offset={-80}
           >
-            <BtnSpan>
-              Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-            </BtnSpan>
+            <BtnSpan to="projects">Projects</BtnSpan>
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

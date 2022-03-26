@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../Footer/Index";
+import { BtnSpan, Buttons } from "../ButtonElements";
 import { Data } from "../../Data";
 import AllProjectsCard from "./AllProjectsCard";
 import { Paginate } from "../common/Paginate";
 import Pagination from "../common/Pagination";
 import SearchBox from "../common/SearchBox";
-import ListGroup from "../common/ListGroup";
-import { ProjectContainer } from "./ProjectsElements";
+import Select from "../common/Select";
+
 export default class AllProjects extends Component {
   state = {
     projects: [],
@@ -19,7 +21,7 @@ export default class AllProjects extends Component {
 
   componentDidMount() {
     const { genres } = Data;
-    const data = [{ _id: "", name: "All Genres" }, ...genres];
+    const data = [{ _id: "", name: "All Projects" }, ...genres];
     const { projects } = Data;
     this.setState({ projects, genres: data });
   }
@@ -28,12 +30,16 @@ export default class AllProjects extends Component {
     this.setState({ currentPage: page });
   };
 
-  handleSelection = (genre) => {
-    this.setState({ selectedGenre: genre, searchQuery: "", currentPage: 1 });
-  };
-
   handleQuery = (query) => {
     this.setState({ searchQuery: query, selectedGenre: null, currentPage: 1 });
+  };
+
+  handleSelection = ({ currentTarget: input }) => {
+    const genres = this.state.genres;
+    const genre = genres.find((genre) => genre._id === input.value);
+    this.setState({ selectedGenre: genre, searchQuery: "", currentPage: 1 });
+
+    console.log(genre);
   };
 
   getData() {
@@ -61,38 +67,37 @@ export default class AllProjects extends Component {
   }
 
   render() {
-    const { genres, selectedGenre, currentPage, pageSize, searchQuery } =
-      this.state;
+    const { genres, currentPage, pageSize, searchQuery } = this.state;
     const { projects, count } = this.getData();
+    const Button = Buttons(Link);
     return (
-      <ProjectContainer className="row">
-        <div className="col-3 m-3">
-          <ListGroup
-            genres={genres}
-            selectedItem={selectedGenre}
-            onSelect={this.handleSelection}
-          />
+      <div className="project-container">
+        <div className="projects_bar">
+          <Button dark="true" primary="true" to="/" className=" btn-sm m-3">
+            <BtnSpan>Home</BtnSpan>
+          </Button>
+          <Select options={genres} onChange={this.handleSelection} />
         </div>
-        <div className="col">
-          <Link to="/" className="btn btn-warning btn-sm m-3">
-            Home
-          </Link>
-
-          <SearchBox value={searchQuery} onChange={this.handleQuery} />
-
-          <div className="projects">
-            {projects.map((project) => (
-              <AllProjectsCard key={project._id} {...project} />
-            ))}
+        <div className="projects-wrapper">
+          <div>
+            <div className="projects-content">
+              <SearchBox value={searchQuery} onChange={this.handleQuery} />
+              <div className="project-item">
+                {projects.map((project) => (
+                  <AllProjectsCard key={project._id} {...project} />
+                ))}
+              </div>
+              <Pagination
+                currentPage={currentPage}
+                pageSize={pageSize}
+                onPageChange={this.handlepageChange}
+                pageItems={count}
+              />
+            </div>
           </div>
-          <Pagination
-            currentPage={currentPage}
-            pageSize={pageSize}
-            onPageChange={this.handlepageChange}
-            pageItems={count}
-          />
         </div>
-      </ProjectContainer>
+        <Footer />
+      </div>
     );
   }
 }

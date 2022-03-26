@@ -38,7 +38,6 @@ export const NavLogo = styled(LinkR)`
   align-items: center;
   margin-left: 24px;
   font-weight: bold;
-  text-decoration: none;
   border-radius: 50%;
   color: #fff;
   animation: rotate 10s linear infinite;
@@ -152,7 +151,6 @@ export const NavLinks = styled(LinkS)`
   font-weight: 400;
   cursor: pointer;
   font-size: 1.4rem;
-  text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s ease-in-out;
   height: 100%;

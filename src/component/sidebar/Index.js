@@ -45,14 +45,6 @@ const Sidebar = ({ toggle, isOpen }) => {
           >
             Contact
           </SidebarLink>
-          <SidebarLink
-            spy={true}
-            className={isOpen && "open"}
-            onClick={toggle}
-            to="signup"
-          >
-            Sign Up
-          </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to="/signin">Sign In</SidebarRoute>
