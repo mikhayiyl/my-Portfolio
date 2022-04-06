@@ -499,7 +499,7 @@ div.h4 {
 
 /* END OF CONTACT SECTION STYLES */
 
-/* LEAVES ANIMATION */
+/* FLY ANIMATION */
 .set {
   position: absolute;
   width: 100%;
@@ -517,36 +517,36 @@ div.h4 {
 
 .set div:nth-child(1) {
   left: 20%;
-  animation: leaves 15s linear infinite;
+  animation: flies 15s linear infinite;
   animation-delay: -7s;
 }
 .set div:nth-child(2) {
   left: 50%;
-  animation: leaves 20s linear infinite;
+  animation: flies 20s linear infinite;
   animation-delay: -5s;
 }
 .set div:nth-child(3) {
   left: 70%;
-  animation: leaves 20s linear infinite;
+  animation: flies 20s linear infinite;
   animation-delay: 0s;
 }
 .set div:nth-child(4) {
   left: 0%;
-  animation: leaves 15s linear infinite;
+  animation: flies 15s linear infinite;
   animation-delay: -5s;
 }
 .set div:nth-child(5) {
   left: 85%;
-  animation: leaves 18s linear infinite;
+  animation: flies 18s linear infinite;
   animation-delay: -10s;
 }
 .set div:nth-child(6) {
   left: 0%;
-  animation: leaves 12s linear infinite;
+  animation: flies 12s linear infinite;
 }
 .set div:nth-child(7) {
   left: 15%;
-  animation: leaves 14s linear infinite;
+  animation: flies 14s linear infinite;
   transform: scale(0.8) rotateY(180deg);
   filter: blur(2px);
 }
@@ -554,10 +554,10 @@ div.h4 {
   transform: scale(2) rotateY(180deg);
   filter: blur(2px);
   left: 60%;
-  animation: leaves 15s linear infinite;
+  animation: flies 15s linear infinite;
 }
 
-@keyframes leaves {
+@keyframes flies {
   0% {
     opacity: 0;
     top: -10%;
@@ -595,7 +595,10 @@ div.h4 {
   filter: blur(2px);
 }
 
-/*END OF LEAVES ANIMATION */
+.png {
+  width: 100px;
+}
+/*END OF FLY ANIMATION */
 
 /* HERO TEXT COLOR ANIMATION */
 
