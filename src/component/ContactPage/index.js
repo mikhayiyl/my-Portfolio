@@ -12,28 +12,28 @@ const Index = () => {
         {/* FLY ANIMATION SECTION */}
         <div className="set">
           <div>
-            <img src="fly.png" alt="leave" />
+            <img src="fly.png" alt="butterfly" />
           </div>
           <div>
-            <img src="fly2.png" alt="leave" />
+            <img src="fly1.png" alt="butterfly" />
           </div>
           <div>
-            <img src="fly3.png" alt="leave" />
+            <img src="fly3.png" alt="butterfly" />
           </div>
           <div>
-            <img src="fly4.png" alt="leave" />
+            <img src="fly4.png" alt="butterfly" />
           </div>
           <div>
-            <img src="fly5.png" alt="leave" />
+            <img src="fly5.png" alt="butterfly" />
           </div>
           <div>
-            <img src="fly2.png" alt="leave" />
+            <img src="fly1.png" alt="butterfly" />
           </div>
           <div>
-            <img src="fly3.png" alt="leave" />
+            <img src="fly3.png" alt="butterfly" />
           </div>
           <div>
-            <img src="fly4.png" alt="leave" />
+            <img src="fly4.png" alt="butterfly" />
           </div>
         </div>
 
