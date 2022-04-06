@@ -9,35 +9,35 @@ const Index = () => {
           </h1>
         </div>
 
-        {/* LEAVES ANIMATION SECTION */}
+        {/* FLY ANIMATION SECTION */}
         <div className="set">
           <div>
-            <img src="leaves1.png" alt="leave" />
+            <img src="fly.png" alt="leave" />
           </div>
           <div>
-            <img src="leaves2.png" alt="leave" />
+            <img src="fly2.png" alt="leave" />
           </div>
           <div>
-            <img src="leaves3.png" alt="leave" />
+            <img src="fly3.png" alt="leave" />
           </div>
           <div>
-            <img src="leaves4.png" alt="leave" />
+            <img src="fly4.png" alt="leave" />
           </div>
           <div>
-            <img src="leaves1.png" alt="leave" />
+            <img src="fly5.png" alt="leave" />
           </div>
           <div>
-            <img src="leaves2.png" alt="leave" />
+            <img src="fly2.png" alt="leave" />
           </div>
           <div>
-            <img src="leaves3.png" alt="leave" />
+            <img src="fly3.png" alt="leave" />
           </div>
           <div>
-            <img src="leaves4.png" alt="leave" />
+            <img src="fly4.png" alt="leave" />
           </div>
         </div>
 
-        {/* END LEAVES SECTION */}
+        {/* END FLY SECTION */}
 
         <div className="contact-items">
           <div className="contact-item">
